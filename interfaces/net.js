@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Quantity } from '../types';
-import { fromDecimal } from '../helpers';
+const { Quantity } = require('../types');
+const { fromDecimal } = require('../helpers');
 
-export default {
+module.exports = {
   listening: {
     desc: 'Returns `true` if client is actively listening for network connections.',
     params: [],

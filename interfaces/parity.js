@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Address, Data, Hash, Quantity, BlockNumber, TransactionRequest, TransactionResponse } from '../types';
-import { fromDecimal, withComment, Dummy } from '../helpers';
+const { Address, Data, Hash, Quantity, BlockNumber, TransactionRequest, TransactionResponse } = require('../types');
+const { fromDecimal, withComment, Dummy } = require('../helpers');
 
 const SECTION_ACCOUNTS = 'Accounts (read-only) and Signatures';
 const SECTION_DEV = 'Development';
@@ -28,7 +28,7 @@ const SUBDOC_SET = 'set';
 const SUBDOC_ACCOUNTS = 'accounts';
 const SUBDOC_PUBSUB = 'pubsub';
 
-export default {
+module.exports = {
   accountsInfo: {
     section: SECTION_ACCOUNTS,
     desc: 'Provides metadata for accounts.',

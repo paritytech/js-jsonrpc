@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Address, BlockNumber, Data, Hash, CallRequest } from '../types';
-import { withPreamble, Dummy, fromDecimal } from '../helpers';
+const { Address, BlockNumber, Data, Hash, CallRequest } = require('../types');
+const { withPreamble, Dummy, fromDecimal } = require('../helpers');
 
 const SECTION_FILTERING = 'Transaction-Trace Filtering';
 const SECTION_ADHOC = 'Ad-hoc Tracing';
 
-export default withPreamble(`
+module.exports = withPreamble(`
 
 The trace module is for getting a deeper insight into transaction processing.
 It includes two sets of calls; the transaction trace filtering API and the ad-hoc tracing API.

@@ -14,12 +14,12 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Address, BlockNumber, Data, Hash, Quantity, CallRequest, TransactionRequest } from '../types';
-import { withPreamble, fromDecimal, withComment, Dummy } from '../helpers';
+const { Address, BlockNumber, Data, Hash, Quantity, CallRequest, TransactionRequest } = require('../types');
+const { withPreamble, fromDecimal, withComment, Dummy } = require('../helpers');
 
 const SUBDOC_PUBSUB = 'pubsub';
 
-export default withPreamble(`
+module.exports = withPreamble(`
 
 ## The default block parameter
 
@@ -1203,7 +1203,7 @@ The following options are possible for the \`defaultBlock\` parameter:
       details: {
         startingBlock: {
           type: Quantity,
-          desc: 'The block at which the import started (will only be reset, after the sync reached this head)'
+          desc: 'The block at which the const started (will only be reset, after the sync reached this head)'
         },
         currentBlock: {
           type: Quantity,

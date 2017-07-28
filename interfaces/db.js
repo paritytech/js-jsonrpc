@@ -14,9 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Data } from '../types';
+const { Data } = require('../types');
 
-export default {
+module.exports = {
   getHex: {
     nodoc: 'Not present in Rust code',
     desc: 'Returns binary data from the local database.',

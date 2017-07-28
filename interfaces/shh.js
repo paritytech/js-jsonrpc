@@ -14,9 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Data, Quantity } from '../types';
+const { Data, Quantity } = require('../types');
 
-export default {
+module.exports = {
   version: {
     nodoc: 'Not present in Rust code',
     desc: 'Returns the current whisper protocol version.',

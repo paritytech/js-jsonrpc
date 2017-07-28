@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import interfaces from './';
-import * as customTypes from './types';
+const interfaces = require('./');
+const customTypes = require('./types');
 
 const allowedTypes = [Array, Boolean, Object, String].concat(Object.values(customTypes));
 

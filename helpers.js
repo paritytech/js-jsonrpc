@@ -21,7 +21,8 @@
 //     foo: new Dummy('{ ... }')   ------->       "foo": { ... }
 //   }                                          {
 //
-export class Dummy {
+
+class Dummy {
   constructor (value) {
     this.value = value;
   }
@@ -33,22 +34,22 @@ export class Dummy {
   toJSON () {
     return `##${this.value}##`;
   }
+}
 
-  static fixJSON (json) {
-    return json.replace(/"##([^#]+)##"/g, '$1');
-  }
+Dummy.fixJSON (json) = {
+  return json.replace(/"##([^#]+)##"/g, '$1');
+}
 
-  static isDummy (obj) {
-    return obj instanceof Dummy;
-  }
+Dummy.isDummy = (obj) => {
+  return obj instanceof Dummy;
+}
 
-  static stringifyJSON (any) {
-    return Dummy.fixJSON(JSON.stringify(any));
-  }
+Dummy.stringifyJSON = (any) => {
+  return Dummy.fixJSON(JSON.stringify(any));
 }
 
 // Enrich the API spec by additional markdown-formatted preamble
-export function withPreamble (preamble, spec) {
+function withPreamble (preamble, spec) {
   Object.defineProperty(spec, '_preamble', {
     value: preamble.trim(),
     enumerable: false
@@ -58,7 +59,7 @@ export function withPreamble (preamble, spec) {
 }
 
 // Enrich any example value with a comment to print in the docs
-export function withComment (example, comment) {
+function withComment (example, comment) {
   const constructor = example == null ? null : example.constructor;
 
   if (constructor === Object || constructor === Array) {
@@ -75,7 +76,7 @@ export function withComment (example, comment) {
 }
 
 // Turn a decimal number into a hexadecimal string with comment to it's original value
-export function fromDecimal (decimal) {
+function fromDecimal (decimal) {
   return withComment(`0x${decimal.toString(16)}`, decimal.toString());
 }
 
@@ -90,3 +91,10 @@ class PrimitiveWithComment {
     return this._value;
   }
 }
+
+module.exports = {
+  Dummy,
+  fromDecimal,
+  withComment,
+  withPreamble
+};

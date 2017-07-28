@@ -14,17 +14,17 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import db from './interfaces/db';
-import eth from './interfaces/eth';
-import net from './interfaces/net';
-import parity from './interfaces/parity';
-import personal from './interfaces/personal';
-import shh from './interfaces/shh';
-import signer from './interfaces/signer';
-import trace from './interfaces/trace';
-import web3 from './interfaces/web3';
+const db = require('./interfaces/db');
+const eth = require('./interfaces/eth');
+const net = require('./interfaces/net');
+const parity = require('./interfaces/parity');
+const personal = require('./interfaces/personal');
+const shh = require('./interfaces/shh');
+const signer = require('./interfaces/signer');
+const trace = require('./interfaces/trace');
+const web3 = require('./interfaces/web3');
 
-export default {
+module.exports = {
   db,
   eth,
   parity,

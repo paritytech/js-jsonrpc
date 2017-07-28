@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-import { Quantity, Data } from '../types';
-import { fromDecimal, Dummy } from '../helpers';
+const { Quantity, Data } = require('../types');
+const { fromDecimal, Dummy } = require('../helpers');
 
-export default {
+module.exports = {
   generateAuthorizationToken: {
     desc: 'Generates a new authorization token.',
     params: [],

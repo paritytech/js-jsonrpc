@@ -14,6 +14,25 @@
 // You should have received a copy of the GNU General Public License
 // along with Parity.  If not, see <http://www.gnu.org/licenses/>.
 
-const JsonRpc = require('./index');
+const chalk = require('chalk');
 
-module.exports = JsonRpc;
+// INFO Logging helper
+function info (log) {
+  console.log(chalk.blue(`INFO:\t${log}`));
+}
+
+// WARN Logging helper
+function warn (log) {
+  console.warn(chalk.yellow(`WARN:\t${log}`));
+}
+
+// ERROR Logging helper
+function error (log) {
+  console.error(chalk.red(`ERROR:\t${log}`));
+}
+
+module.exports = {
+  info,
+  warn,
+  error
+};

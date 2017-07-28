@@ -20,9 +20,15 @@
     "Parity"
   ],
   "scripts": {
+    "build:json": "node scripts/build-rpc-json.js",
+    "build:markdown": "node scripts/build-rpc-markdown.js",
+    "build": "npm run build:json && npm run build:markdown"
   },
   "devDependencies": {
+    "chalk": "^2.0.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yargs": "^8.0.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

@@ -36,7 +36,7 @@ class Dummy {
   }
 }
 
-Dummy.fixJSON (json) = {
+Dummy.fixJSON = (json) => {
   return json.replace(/"##([^#]+)##"/g, '$1');
 }
 

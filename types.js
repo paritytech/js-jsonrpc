@@ -24,6 +24,8 @@ class Hash {}
 
 class Integer {}
 
+class Float {}
+
 class Quantity {}
 
 class BlockNumber {}
@@ -207,6 +209,7 @@ module.exports = {
   Float,
   Hash,
   Integer,
+  Float,
   Quantity,
   BlockNumber,
   CallRequest,

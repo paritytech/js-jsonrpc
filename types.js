@@ -18,19 +18,19 @@ class Address {}
 
 class Data {}
 
+class Float {}
+
 class Hash {}
 
 class Integer {}
 
 class Quantity {}
 
-class BlockNumber {
-}
+class BlockNumber {}
 
 BlockNumber.print = '`Quantity` | `Tag`';
 
-class CallRequest {
-}
+class CallRequest {}
 
 CallRequest.print = '`Object`';
 
@@ -66,8 +66,7 @@ CallRequest.details = {
   }
 }
 
-class TransactionRequest {
-}
+class TransactionRequest {}
 
 TransactionRequest.print = '`Object`';
 
@@ -113,8 +112,7 @@ TransactionRequest.details = {
   }
 }
 
-class TransactionResponse {
-}
+class TransactionResponse {}
 
 TransactionResponse.print = '`Object`';
 
@@ -206,6 +204,7 @@ TransactionResponse.details = {
 module.exports = {
   Address,
   Data,
+  Float,
   Hash,
   Integer,
   Quantity,

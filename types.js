@@ -24,8 +24,6 @@ class Hash {}
 
 class Integer {}
 
-class Float {}
-
 class Quantity {}
 
 class BlockNumber {}
@@ -66,7 +64,7 @@ CallRequest.details = {
     desc: '4 byte hash of the method signature followed by encoded parameters. For details see [Ethereum Contract ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI).',
     optional: true
   }
-}
+};
 
 class TransactionRequest {}
 
@@ -112,7 +110,7 @@ TransactionRequest.details = {
     desc: 'Conditional submission of the transaction. Can be either an integer block number `{ block: 1 }` or UTC timestamp (in seconds) `{ time: 1491290692 }` or `null`.',
     optional: true
   }
-}
+};
 
 class TransactionResponse {}
 
@@ -201,7 +199,7 @@ TransactionResponse.details = {
     optional: true,
     desc: 'Conditional submission, Block number in `block` or timestamp in `time` or `null`.'
   }
-}
+};
 
 module.exports = {
   Address,
@@ -209,7 +207,6 @@ module.exports = {
   Float,
   Hash,
   Integer,
-  Float,
   Quantity,
   BlockNumber,
   CallRequest,

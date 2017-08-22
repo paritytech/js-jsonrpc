@@ -566,9 +566,9 @@ The following options are possible for the \`defaultBlock\` parameter:
           type: Hash,
           desc: 'public key of the signer.'
         },
-        networkId: {
+        chainId: {
           type: Quantity,
-          desc: 'the network id of the transaction, if any.'
+          desc: 'the chain id of the transaction, if any.'
         },
         creates: {
           type: Hash,
@@ -1111,9 +1111,9 @@ The following options are possible for the \`defaultBlock\` parameter:
               type: Hash,
               desc: 'public key of the signer.'
             },
-            networkId: {
+            chainId: {
               type: Quantity,
-              desc: 'the network id of the transaction, if any.'
+              desc: 'the chain id of the transaction, if any.'
             },
             creates: {
               type: Hash,
@@ -1203,7 +1203,7 @@ The following options are possible for the \`defaultBlock\` parameter:
       details: {
         startingBlock: {
           type: Quantity,
-          desc: 'The block at which the const started (will only be reset, after the sync reached this head)'
+          desc: 'The block at which the import started (will only be reset, after the sync reached this head)'
         },
         currentBlock: {
           type: Quantity,

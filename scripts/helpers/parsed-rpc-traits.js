@@ -59,11 +59,12 @@ function parseMethodsFromRust (source) {
 function getMethodsFromRustTraits () {
   const traitsDir = path.join(__dirname, '../../../parity/rpc/src/v1/traits');
 
-  return fs.readdirSync(traitsDir)
-            .filter((name) => name !== 'mod.rs' && /\.rs$/.test(name))
-            .map((name) => fs.readFileSync(path.join(traitsDir, name)))
-            .map(parseMethodsFromRust)
-            .reduce((a, b) => a.concat(b));
+  return fs
+    .readdirSync(traitsDir)
+    .filter((name) => name !== 'mod.rs' && /\.rs$/.test(name))
+    .map((name) => fs.readFileSync(path.join(traitsDir, name)))
+    .map(parseMethodsFromRust)
+    .reduce((a, b) => a.concat(b));
 }
 
 getMethodsFromRustTraits().sort().forEach((method) => {

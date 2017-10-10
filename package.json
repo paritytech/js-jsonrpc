@@ -23,7 +23,7 @@
     "build": "npm run build:json && npm run build:markdown",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "echo \"WARN: npm run lint:css skipped\"",
-    "lint:js": "eslint --ignore-path .gitignore ./interfaces/",
+    "lint:js": "eslint --ignore-path .gitignore .",
     "test": "echo \"WARN: npm run test skipped\"",
     "build:json": "node scripts/build-rpc-json.js",
     "build:markdown": "node scripts/build-rpc-markdown.js"

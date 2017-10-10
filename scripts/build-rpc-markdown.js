@@ -19,7 +19,7 @@ const path = require('path');
 const { isPlainObject } = require('lodash');
 
 const { info, warn, error } = require('./helpers/log');
-const { Dummy }  = require('../helpers');
+const { Dummy } = require('../helpers');
 const interfaces = require('../index');
 const rustMethods = require('./helpers/parsed-rpc-traits');
 

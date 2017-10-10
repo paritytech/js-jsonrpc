@@ -38,15 +38,15 @@ class Dummy {
 
 Dummy.fixJSON = (json) => {
   return json.replace(/"##([^#]+)##"/g, '$1');
-}
+};
 
 Dummy.isDummy = (obj) => {
   return obj instanceof Dummy;
-}
+};
 
 Dummy.stringifyJSON = (any) => {
   return Dummy.fixJSON(JSON.stringify(any));
-}
+};
 
 // Enrich the API spec by additional markdown-formatted preamble
 function withPreamble (preamble, spec) {

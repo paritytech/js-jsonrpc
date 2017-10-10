@@ -2,6 +2,11 @@
 
 JSON file of all ethereum's rpc methods supported by parity
 
+[![Build Status](https://travis-ci.org/paritytech/js-jsonrpc.svg?branch=master)](https://travis-ci.org/paritytech/js-jsonrpc)
+[![Coverage Status](https://coveralls.io/repos/github/paritytech/js-jsonrpc/badge.svg?branch=master)](https://coveralls.io/github/paritytech/js-jsonrpc?branch=master)
+[![Dependency Status](https://david-dm.org/paritytech/js-jsonrpc.svg)](https://david-dm.org/paritytech/js-jsonrpc)
+[![devDependency Status](https://david-dm.org/paritytech/js-jsonrpc/dev-status.svg)](https://david-dm.org/paritytech/js-jsonrpc#info=devDependencies)
+
 ## interfaces
 
 [interfaces.md](release/interfaces.md) contains the auto-generated list of interfaces exposed, along with their relevant documentation

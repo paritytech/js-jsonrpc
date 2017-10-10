@@ -57,7 +57,7 @@ function parseMethodsFromRust (source) {
 
 // Get a list of all JSON-RPC methods from all defined traits
 function getMethodsFromRustTraits () {
-  const traitsDir = path.join(__dirname, '../../../parity/rpc/src/v1/traits');
+  const traitsDir = path.join(__dirname, '../../.parity/rpc/src/v1/traits');
 
   return fs
     .readdirSync(traitsDir)

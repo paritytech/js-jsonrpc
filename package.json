@@ -20,7 +20,8 @@
     "Parity"
   ],
   "scripts": {
-    "build": "npm run build:json && npm run build:markdown",
+    "build": "npm run checkout && npm run build:json && npm run build:markdown",
+    "checkout": "./scripts/checkout-parity.sh",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "echo \"WARN: npm run lint:css skipped\"",
     "lint:js": "eslint --ignore-path .gitignore .",

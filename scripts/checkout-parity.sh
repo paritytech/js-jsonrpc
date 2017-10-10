@@ -3,5 +3,5 @@
 set -e
 
 rm -rf .parity
-mkdir -p release
+mkdir -p docs release
 git clone http://github.com/paritytech/parity.git .parity

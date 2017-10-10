@@ -20,9 +20,13 @@
     "Parity"
   ],
   "scripts": {
+    "build": "npm run build:json && npm run build:markdown",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "stylelint ./src/**/*.css",
+    "lint:js": "eslint --ignore-path .gitignore ./src/",
+    "test": "echo \"WARN: npm run test skipped\"",
     "build:json": "node scripts/build-rpc-json.js",
-    "build:markdown": "node scripts/build-rpc-markdown.js",
-    "build": "npm run build:json && npm run build:markdown"
+    "build:markdown": "node scripts/build-rpc-markdown.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

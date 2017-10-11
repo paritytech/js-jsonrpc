@@ -20,7 +20,7 @@
     "Parity"
   ],
   "engines": {
-    "node" : ">=6.4"
+    "node": ">=6.4"
   },
   "scripts": {
     "build": "npm run checkout && npm run build:json && npm run build:markdown",

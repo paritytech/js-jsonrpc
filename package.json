@@ -33,6 +33,9 @@
     "build:json": "node scripts/build-rpc-json.js",
     "build:markdown": "node scripts/build-rpc-markdown.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -53,5 +56,6 @@
     "mkdirp": "^0.5.1",
     "yargs": "^8.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

@@ -1,0 +1,8 @@
+scripts
+src
+.parity
+.babelrc
+.editorconfig
+.eslintrc.json
+.gitignore
+.travis.yml

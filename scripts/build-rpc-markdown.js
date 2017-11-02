@@ -19,8 +19,8 @@ const path = require('path');
 const { isPlainObject } = require('lodash');
 
 const { info, warn, error } = require('./helpers/log');
-const { Dummy } = require('../helpers');
-const interfaces = require('../index');
+const { Dummy } = require('../src/helpers');
+const interfaces = require('../src/index');
 const rustMethods = require('./helpers/parsed-rpc-traits');
 
 const ROOT_DIR = path.join(__dirname, '../docs');

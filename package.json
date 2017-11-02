@@ -1,8 +1,8 @@
 {
   "name": "@parity/jsonrpc",
   "description": "JSON and JS interface defintions for RPC",
-  "version": "2.0.19",
-  "main": "index.js",
+  "version": "2.1.0",
+  "main": "lib/index.js",
   "author": "Parity Team <admin@parity.io>",
   "maintainers": [
     "Jaco Greeff",
@@ -23,16 +23,23 @@
     "node": ">=6.4"
   },
   "scripts": {
-    "build": "npm run checkout && npm run build:json && npm run build:markdown",
-    "checkout": "./scripts/checkout-parity.sh",
+    "build": "npm run checkout:parity && npm run build:js && npm run build:json && npm run build:markdown",
+    "checkout:parity": "./scripts/checkout-parity.sh",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "echo \"WARN: npm run lint:css skipped\"",
-    "lint:js": "eslint --ignore-path .gitignore .",
+    "lint:js": "eslint src",
     "test": "echo \"WARN: npm run test skipped\"",
+    "build:js": "rm -rf lib && babel src --out-dir lib --ignore *.spec.js",
     "build:json": "node scripts/build-rpc-json.js",
     "build:markdown": "node scripts/build-rpc-markdown.js"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chalk": "^2.0.1",
     "eslint": "^4.4.0",
     "eslint-config-semistandard": "^11.0.0",

@@ -19,7 +19,7 @@ const mkdirp = require('mkdirp');
 const path = require('path');
 const yargs = require('yargs');
 
-const interfaces = require('../index');
+const interfaces = require('../src/index');
 
 const argv = yargs.default('output', 'release').argv;
 

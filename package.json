@@ -23,15 +23,18 @@
     "node": ">=6.4"
   },
   "scripts": {
-    "build": "npm run checkout:parity && npm run build:js && npm run build:json && npm run build:markdown",
-    "checkout:parity": "./scripts/checkout-parity.sh",
+    "build": "npm run build:js",
+    "build:js": "rm -rf lib && babel src --out-dir lib --ignore *.spec.js",
+    "build:json": "node scripts/build-rpc-json.js",
+    "build:markdown": "node scripts/build-rpc-markdown.js",
+    "ci:build": "npm run ci:parity && npm run build:js && npm run build:json && npm run build:markdown",
+    "ci:coveralls": "coveralls < coverage/lcov.info",
+    "ci:parity": "./scripts/checkout-parity.sh",
+    "ci:makeshift": "makeshift",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "echo \"WARN: npm run lint:css skipped\"",
     "lint:js": "eslint src",
-    "test": "echo \"WARN: npm run test skipped\"",
-    "build:js": "rm -rf lib && babel src --out-dir lib --ignore *.spec.js",
-    "build:json": "node scripts/build-rpc-json.js",
-    "build:markdown": "node scripts/build-rpc-markdown.js"
+    "test": "echo \"WARN: npm run test skipped\""
   },
   "publishConfig": {
     "access": "public"
@@ -53,6 +56,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "lodash": "^4.17.4",
+    "makeshift": "^1.1.0",
     "mkdirp": "^0.5.1",
     "yargs": "^8.0.2"
   },

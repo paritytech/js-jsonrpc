@@ -1282,7 +1282,7 @@ The following options are possible for the \`defaultBlock\` parameter:
         {
           type: String,
           desc: 'Subscription type: one of `newHeads`, `logs`',
-          example: 'newHeads'
+          example: 'logs'
         },
         {
           type: Object,
